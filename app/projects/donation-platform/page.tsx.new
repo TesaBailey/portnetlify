@@ -1,0 +1,4 @@
+// This project is temporarily hidden
+export default function DonationPlatform() {
+  return null;
+}

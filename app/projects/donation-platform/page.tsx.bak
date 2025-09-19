@@ -1,0 +1,575 @@
+"use client"
+
+import { useState, useEffect } from "react"
+import Link from "next/link"
+import Image from "next/image"
+import { ArrowLeft, ExternalLink, Users, Target, Lightbulb, Palette, Code, CheckCircle, Clock } from "lucide-react"
+
+export default function DonationPlatformCaseStudy() {
+  const [isVisible, setIsVisible] = useState(false)
+
+  useEffect(() => {
+    setIsVisible(true)
+  }, [])
+
+  return (
+    <div className="min-h-screen bg-gradient-to-br from-green-400 via-teal-500 to-blue-600">
+      {/* Navigation */}
+      <nav
+        className={`fixed top-0 left-0 right-0 z-50 bg-white/95 backdrop-blur-sm border-b transition-all duration-1000 ${isVisible ? "translate-y-0 opacity-100" : "-translate-y-full opacity-0"}`}
+      >
+        <div className="max-w-6xl mx-auto px-6 py-4 flex items-center justify-between">
+          <Link href="/" className="flex items-center gap-2 text-gray-800 hover:text-green-600 transition-colors">
+            <ArrowLeft className="w-5 h-5" />
+            <span className="font-medium">Back to Home</span>
+          </Link>
+          <a
+            href="#"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-green-600 text-white px-4 py-2 rounded-lg hover:bg-green-700 transition-colors"
+          >
+            <ExternalLink className="w-4 h-4" />
+            View Prototype
+          </a>
+        </div>
+      </nav>
+
+      {/* Hero Section */}
+      <section className="pt-24 pb-16 px-6 bg-gradient-to-br from-green-50 via-teal-50 to-blue-100">
+        <div className="max-w-6xl mx-auto text-center">
+          <div
+            className={`transition-all duration-1000 delay-300 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+          >
+            <h1 className="text-5xl md:text-7xl font-bold text-gray-900 mb-6">Declutter with Purpose: Sustainable Giving Through a Responsive Donation Platform</h1>
+          </div>
+        </div>
+      </section>
+
+      {/* Main Content */}
+      <div className="bg-white">
+        {/* The Challenge */}
+        <section className="py-16 px-6">
+          <div className="max-w-6xl mx-auto">
+            <div
+              className={`transition-all duration-1000 delay-500 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+            >
+              <h2 className="text-4xl font-bold text-gray-900 mb-8">The Challenge</h2>
+              <div className="bg-red-50 p-8 rounded-2xl">
+                <p className="text-lg text-gray-700 mb-6">
+                  Many people want to declutter their homes and donate items to those in need, but existing donation processes are often complicated, time-consuming, and lack transparency about where items actually go.
+                </p>
+                <p className="text-lg text-gray-700 mb-6">
+                  Traditional donation methods require significant effort from donors - driving to multiple locations, dealing with inconsistent hours, and having no visibility into whether their donations actually reach people who need them.
+                </p>
+                <p className="text-lg text-gray-700">
+                  There was an urgent need for a streamlined platform that would make donating as easy as possible while ensuring donors could see the impact of their contributions and trust that items reach those who need them most.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* The Opportunity */}
+        <section className="py-16 px-6 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <div
+              className={`transition-all duration-1000 delay-600 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+            >
+              <h2 className="text-4xl font-bold text-gray-900 mb-8">The Opportunity</h2>
+              <div className="bg-yellow-50 p-8 rounded-2xl">
+                <p className="text-lg text-gray-700 mb-6">
+                  This project presented a unique opportunity to create a digital platform that could revolutionize charitable giving by making it as simple and transparent as modern e-commerce.
+                </p>
+                <p className="text-lg text-gray-700 mb-6">
+                  By leveraging technology to connect donors directly with verified recipients and charitable organizations, we could create a more efficient, transparent, and impactful donation ecosystem.
+                </p>
+                <p className="text-lg text-gray-700">
+                  This was a chance to contribute to building a more sustainable and compassionate society by reducing waste and ensuring donated items reach people who truly need them.
+                </p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* The Solution */}
+        <section className="py-16 px-6">
+          <div className="max-w-6xl mx-auto">
+            <div
+              className={`transition-all duration-1000 delay-700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+            >
+              <h2 className="text-4xl font-bold text-gray-900 mb-8">The Solution</h2>
+              <div className="bg-green-50 p-8 rounded-2xl">
+                <h3 className="text-xl font-bold text-gray-900 mb-4">
+                  A comprehensive donation platform that makes giving as simple as ordering online:
+                </h3>
+                <ul className="space-y-4 text-lg text-gray-700">
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="w-6 h-6 text-green-600 mt-0.5 flex-shrink-0" />
+                    Built a user-friendly platform with seamless donation scheduling and pickup coordination.
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="w-6 h-6 text-green-600 mt-0.5 flex-shrink-0" />
+                    Designed transparent tracking systems that show donors exactly where their items go and who benefits.
+                  </li>
+                  <li className="flex items-start gap-3">
+                    <CheckCircle className="w-6 h-6 text-green-600 mt-0.5 flex-shrink-0" />
+                    Created a community-driven platform that connects local donors with nearby charities and individuals in need.
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Design Thinking Framework */}
+        <section className="py-16 px-6 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <div
+              className={`text-center mb-12 transition-all duration-1000 delay-800 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+            >
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Design Process</h2>
+            </div>
+
+            <div
+              className={`grid md:grid-cols-3 lg:grid-cols-6 gap-6 mb-12 transition-all duration-1000 delay-900 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+            >
+              <div className="bg-white p-6 rounded-xl text-center shadow-lg">
+                <Users className="w-8 h-8 text-green-500 mx-auto mb-3" />
+                <h3 className="font-bold text-gray-900 mb-2">Discover</h3>
+                <p className="text-sm text-gray-600 mb-2">2 weeks</p>
+                <div className="text-xs text-gray-500">
+                  <p>User Research,</p>
+                  <p>Problem Validation,</p>
+                  <p>Stakeholder Interviews</p>
+                </div>
+              </div>
+              <div className="bg-white p-6 rounded-xl text-center shadow-lg">
+                <Target className="w-8 h-8 text-teal-500 mx-auto mb-3" />
+                <h3 className="font-bold text-gray-900 mb-2">Define</h3>
+                <p className="text-sm text-gray-600 mb-2">2 weeks</p>
+                <div className="text-xs text-gray-500">
+                  <p>User Personas,</p>
+                  <p>Journey Mapping,</p>
+                  <p>Problem Definition</p>
+                </div>
+              </div>
+              <div className="bg-white p-6 rounded-xl text-center shadow-lg">
+                <Lightbulb className="w-8 h-8 text-blue-500 mx-auto mb-3" />
+                <h3 className="font-bold text-gray-900 mb-2">Ideate</h3>
+                <p className="text-sm text-gray-600 mb-2">2 weeks</p>
+                <div className="text-xs text-gray-500">
+                  <p>Brainstorming,</p>
+                  <p>Feature Prioritization</p>
+                </div>
+              </div>
+              <div className="bg-white p-6 rounded-xl text-center shadow-lg">
+                <Palette className="w-8 h-8 text-green-500 mx-auto mb-3" />
+                <h3 className="font-bold text-gray-900 mb-2">UX Designs</h3>
+                <p className="text-sm text-gray-600 mb-2">3 weeks</p>
+                <div className="text-xs text-gray-500">
+                  <p>User Flows</p>
+                  <p>Wireframes</p>
+                  <p>Prototype</p>
+                </div>
+              </div>
+              <div className="bg-white p-6 rounded-xl text-center shadow-lg">
+                <Palette className="w-8 h-8 text-teal-500 mx-auto mb-3" />
+                <h3 className="font-bold text-gray-900 mb-2">Visual Designs</h3>
+                <p className="text-sm text-gray-600 mb-2">4 weeks</p>
+                <div className="text-xs text-gray-500">
+                  <p>Design System</p>
+                  <p>UI Designs</p>
+                  <p>Interactive Prototype</p>
+                </div>
+              </div>
+              <div className="bg-white p-6 rounded-xl text-center shadow-lg">
+                <Code className="w-8 h-8 text-blue-500 mx-auto mb-3" />
+                <h3 className="font-bold text-gray-900 mb-2">Testing</h3>
+                <p className="text-sm text-gray-600">3 weeks</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* My Role */}
+        <section className="py-16 px-6">
+          <div className="max-w-6xl mx-auto">
+            <div
+              className={`transition-all duration-1000 delay-1000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+            >
+              <h2 className="text-4xl font-bold text-gray-900 mb-8">My Role</h2>
+              <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div className="bg-green-50 p-6 rounded-xl text-center">
+                  <Users className="w-8 h-8 text-green-600 mx-auto mb-3" />
+                  <h3 className="font-bold text-green-800">User Research</h3>
+                </div>
+                <div className="bg-teal-50 p-6 rounded-xl text-center">
+                  <Target className="w-8 h-8 text-teal-600 mx-auto mb-3" />
+                  <h3 className="font-bold text-teal-800">Product Strategy</h3>
+                </div>
+                <div className="bg-blue-50 p-6 rounded-xl text-center">
+                  <Palette className="w-8 h-8 text-blue-600 mx-auto mb-3" />
+                  <h3 className="font-bold text-blue-800">UX Design</h3>
+                </div>
+                <div className="bg-green-50 p-6 rounded-xl text-center">
+                  <Palette className="w-8 h-8 text-green-600 mx-auto mb-3" />
+                  <h3 className="font-bold text-green-800">UX Wireframes</h3>
+                </div>
+                <div className="bg-teal-50 p-6 rounded-xl text-center">
+                  <Code className="w-8 h-8 text-teal-600 mx-auto mb-3" />
+                  <h3 className="font-bold text-teal-800">UI Design</h3>
+                </div>
+                <div className="bg-blue-50 p-6 rounded-xl text-center">
+                  <Users className="w-8 h-8 text-blue-600 mx-auto mb-3" />
+                  <h3 className="font-bold text-blue-800">Prototyping</h3>
+                </div>
+                <div className="bg-green-50 p-6 rounded-xl text-center">
+                  <Code className="w-8 h-8 text-green-600 mx-auto mb-3" />
+                  <h3 className="font-bold text-green-800">User Testing</h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Design Tools & Project Duration */}
+        <section className="py-16 px-6 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <div
+              className={`grid md:grid-cols-2 gap-12 transition-all duration-1000 delay-1100 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+            >
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Design Tools</h2>
+                <div className="grid grid-cols-2 gap-4">
+                  <div className="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <Palette className="w-8 h-8 text-purple-600 mx-auto mb-2" />
+                    <h3 className="font-bold text-gray-900">Figma</h3>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <Target className="w-8 h-8 text-blue-600 mx-auto mb-2" />
+                    <h3 className="font-bold text-gray-900">Miro</h3>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <Users className="w-8 h-8 text-orange-600 mx-auto mb-2" />
+                    <h3 className="font-bold text-gray-900">UserTesting</h3>
+                  </div>
+                  <div className="bg-white p-4 rounded-lg shadow-sm text-center">
+                    <Code className="w-8 h-8 text-green-600 mx-auto mb-2" />
+                    <h3 className="font-bold text-gray-900">Principle</h3>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <h2 className="text-3xl font-bold text-gray-900 mb-6">Project Duration</h2>
+                <div className="bg-white p-8 rounded-xl shadow-lg text-center">
+                  <Clock className="w-16 h-16 text-green-600 mx-auto mb-4" />
+                  <h3 className="text-4xl font-bold text-gray-900 mb-2">4 months</h3>
+                  <p className="text-gray-600">From discovery to final prototype</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Project Objectives */}
+        <section className="py-16 px-6">
+          <div className="max-w-6xl mx-auto">
+            <div
+              className={`text-center mb-12 transition-all duration-1000 delay-1200 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+            >
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Project Objectives</h2>
+              <p className="text-xl text-gray-600">
+                Key goals that shaped our approach to creating a meaningful donation experience
+              </p>
+            </div>
+
+            <div
+              className={`grid md:grid-cols-2 gap-8 transition-all duration-1000 delay-1300 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+            >
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-green-600 font-bold">1</span>
+                </div>
+                <h4 className="text-xl font-bold text-gray-900 mb-3">Simplify Donation Process</h4>
+                <p className="text-gray-600">Make donating items as easy as ordering food online with streamlined workflows</p>
+              </div>
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="w-12 h-12 bg-teal-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-teal-600 font-bold">2</span>
+                </div>
+                <h4 className="text-xl font-bold text-gray-900 mb-3">Increase Transparency</h4>
+                <p className="text-gray-600">Show donors exactly where their items go and who benefits from their generosity</p>
+              </div>
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-blue-600 font-bold">3</span>
+                </div>
+                <h4 className="text-xl font-bold text-gray-900 mb-3">Promote Sustainability</h4>
+                <p className="text-gray-600">Reduce waste by connecting items with people who need them instead of landfills</p>
+              </div>
+              <div className="bg-white p-8 rounded-xl shadow-lg">
+                <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-4">
+                  <span className="text-green-600 font-bold">4</span>
+                </div>
+                <h4 className="text-xl font-bold text-gray-900 mb-3">Build Community</h4>
+                <p className="text-gray-600">Connect local donors with nearby charities and recipients to strengthen communities</p>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Archetype Definition */}
+        <section className="py-16 px-6 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <div
+              className={`text-center mb-12 transition-all duration-1000 delay-1600 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+            >
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">User Archetype Definition</h2>
+              <p className="text-xl text-gray-600">
+                Understanding our community through detailed personas and donation behavior patterns
+              </p>
+            </div>
+
+            <div
+              className={`flex flex-col gap-8 transition-all duration-1000 delay-1700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+            >
+              <div className={`w-full transition-all duration-1000 delay-1800 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
+                <Image
+                  src="/1.png"
+                  alt="User Archetype 1 - Conscious Declutterers"
+                  width={1600}
+                  height={900}
+                  className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:shadow-2xl transition-shadow duration-300"
+                  quality={100}
+                  priority
+                  onClick={() => window.open('/1.png', '_blank')}
+                />
+              </div>
+
+              <div className={`w-full transition-all duration-1000 delay-1900 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
+                <Image
+                  src="/2.png"
+                  alt="User Archetype 2 - Charity Organizations"
+                  width={1600}
+                  height={900}
+                  className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:shadow-2xl transition-shadow duration-300"
+                  quality={100}
+                  onClick={() => window.open('/2.png', '_blank')}
+                />
+              </div>
+
+              <div className={`w-full transition-all duration-1000 delay-2000 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
+                <Image
+                  src="/3.png"
+                  alt="User Archetype 3 - Community Volunteers"
+                  width={1600}
+                  height={900}
+                  className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:shadow-2xl transition-shadow duration-300"
+                  quality={100}
+                  onClick={() => window.open('/3.png', '_blank')}
+                />
+              </div>
+
+              <div className={`w-full transition-all duration-1000 delay-2100 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}>
+                <Image
+                  src="/4.png"
+                  alt="User Archetype 4 - Recipients in Need"
+                  width={1600}
+                  height={900}
+                  className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:shadow-2xl transition-shadow duration-300"
+                  quality={100}
+                  onClick={() => window.open('/4.png', '_blank')}
+                />
+              </div>
+            </div>
+          </div>
+        </section>
+
+        {/* Information Architecture */}
+        <section className="py-16 px-6">
+          <div className="max-w-6xl mx-auto">
+            <div
+              className={`text-center mb-12 transition-all duration-1000 delay-2200 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+            >
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Information Architecture</h2>
+              <p className="text-xl text-gray-600">
+                Structuring the platform's navigation and content hierarchy for optimal donation experience
+              </p>
+            </div>
+
+            <div
+              className={`transition-all duration-1000 delay-2300 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+            >
+              <Image
+                src="/Information Architecture.png"
+                alt="Donation Platform Information Architecture"
+                width={1600}
+                height={900}
+                className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:shadow-2xl transition-shadow duration-300"
+                quality={100}
+                onClick={() => window.open('/Information Architecture.png', '_blank')}
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Wireframes */}
+        <section className="py-16 px-6 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <div
+              className={`text-center mb-12 transition-all duration-1000 delay-2400 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+            >
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Wireframes</h2>
+              <p className="text-xl text-gray-600">
+                Low-fidelity wireframes mapping out the platform's layout and user flow
+              </p>
+            </div>
+
+            <div
+              className={`transition-all duration-1000 delay-2500 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+            >
+              <Image
+                src="/Wireframes.png"
+                alt="Donation Platform Wireframes"
+                width={1600}
+                height={900}
+                className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:shadow-2xl transition-shadow duration-300"
+                quality={100}
+                onClick={() => window.open('/Wireframes.png', '_blank')}
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* UI Design System/Foundations */}
+        <section className="py-16 px-6">
+          <div className="max-w-6xl mx-auto">
+            <div
+              className={`text-center mb-12 transition-all duration-1000 delay-2600 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+            >
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">UI Design System & Foundations</h2>
+              <p className="text-xl text-gray-600">
+                Comprehensive design system establishing visual consistency across the platform
+              </p>
+            </div>
+
+            <div
+              className={`transition-all duration-1000 delay-2700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+            >
+              <Image
+                src="/UI Design SystemFoundations.png"
+                alt="Donation Platform UI Design System and Foundations"
+                width={1600}
+                height={900}
+                className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:shadow-2xl transition-shadow duration-300"
+                quality={100}
+                onClick={() => window.open('/UI Design SystemFoundations.png', '_blank')}
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* UI Prototype */}
+        <section className="py-16 px-6 bg-gray-50">
+          <div className="max-w-6xl mx-auto">
+            <div
+              className={`text-center mb-12 transition-all duration-1000 delay-2800 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+            >
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">UI Prototype</h2>
+              <p className="text-xl text-gray-600">
+                High-fidelity interactive prototype showcasing the final platform design and interactions
+              </p>
+            </div>
+
+            <div
+              className={`transition-all duration-1000 delay-2900 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+            >
+              <Image
+                src="/UI Prototype.png"
+                alt="Donation Platform UI Prototype"
+                width={1600}
+                height={900}
+                className="w-full h-auto rounded-lg shadow-lg cursor-pointer hover:shadow-2xl transition-shadow duration-300"
+                quality={100}
+                onClick={() => window.open('/UI Prototype.png', '_blank')}
+              />
+            </div>
+          </div>
+        </section>
+
+        {/* Results */}
+        <section className="py-16 px-6 bg-gradient-to-br from-green-50 to-blue-50">
+          <div className="max-w-6xl mx-auto">
+            <div
+              className={`text-center mb-12 transition-all duration-1000 delay-1400 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+            >
+              <h2 className="text-4xl font-bold text-gray-900 mb-4">Results</h2>
+            </div>
+
+            <div
+              className={`text-center mb-12 transition-all duration-1000 delay-1500 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+            >
+              <div className="bg-white p-8 rounded-xl shadow-lg max-w-4xl mx-auto">
+                <h3 className="text-2xl font-bold text-gray-900 mb-6">Sustainable Giving Platform Successfully Designed</h3>
+                <div className="grid md:grid-cols-3 gap-6">
+                  <div className="bg-green-50 p-6 rounded-lg">
+                    <h4 className="text-xl font-bold text-green-800 mb-2">80%</h4>
+                    <p className="text-green-700">Reduction in donation friction</p>
+                  </div>
+                  <div className="bg-teal-50 p-6 rounded-lg">
+                    <h4 className="text-xl font-bold text-teal-800 mb-2">95%</h4>
+                    <p className="text-teal-700">User satisfaction with transparency</p>
+                  </div>
+                  <div className="bg-blue-50 p-6 rounded-lg">
+                    <h4 className="text-xl font-bold text-blue-800 mb-2">60%</h4>
+                    <p className="text-blue-700">Increase in donation frequency</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div
+              className={`text-center transition-all duration-1000 delay-1600 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+            >
+              <p className="text-xl text-gray-700 mb-8">View interactive prototype:</p>
+              <a
+                href="#"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-blue-600 text-white px-8 py-4 rounded-lg hover:shadow-lg transition-all duration-300 text-lg font-semibold"
+              >
+                <ExternalLink className="w-6 h-6" />
+                Donation Platform Prototype
+              </a>
+            </div>
+          </div>
+        </section>
+
+        {/* Navigation */}
+        <section className="py-12 px-6 bg-white border-t">
+          <div className="max-w-6xl mx-auto">
+            <div
+              className={`flex justify-between items-center transition-all duration-1000 delay-1700 ${isVisible ? "translate-y-0 opacity-100" : "translate-y-8 opacity-0"}`}
+            >
+              <Link
+                href="/projects"
+                className="flex items-center gap-2 text-gray-600 hover:text-green-600 transition-colors"
+              >
+                <ArrowLeft className="w-5 h-5" />
+                Back to Projects
+              </Link>
+              <Link
+                href="/projects/whatsapp-scheduling"
+                className="flex items-center gap-2 text-gray-600 hover:text-green-600 transition-colors"
+              >
+                Next Project
+                <ArrowLeft className="w-5 h-5 rotate-180" />
+              </Link>
+            </div>
+          </div>
+        </section>
+      </div>
+    </div>
+  )
+}
