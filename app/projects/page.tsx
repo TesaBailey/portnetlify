@@ -1,37 +1,14 @@
 import { Button } from "@/components/ui/button"
-import { ArrowRight, Linkedin } from "lucide-react"
+import { MobileNav } from "@/components/ui/mobile-nav"
+import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
 
 export default function ProjectsPage() {
   return (
     <div className="min-h-screen bg-white">
-      {/* Header */}
-      <header className="flex items-center justify-between p-6 border-b">
-        <Link href="/" className="flex items-center gap-2">
-          <div className="w-8 h-8 bg-black flex items-center justify-center">
-            <span className="text-white font-bold text-sm">LS</span>
-          </div>
-          <span className="font-medium">Lince Sharara</span>
-          <span className="text-sm text-gray-500 ml-2">UX/UI DESIGNER</span>
-        </Link>
-
-        <nav className="hidden md:flex items-center gap-8">
-          <Link href="/about" className="text-sm hover:underline">
-            About Me
-          </Link>
-          <Link href="/projects" className="text-sm hover:underline font-medium">
-            Projects
-          </Link>
-          <a href="https://wa.me/263773958223" target="_blank" rel="noopener noreferrer" className="text-sm hover:underline">
-          WhatsApp Me
-          </a>
-        </nav>
-
-        <a href="https://www.linkedin.com/in/lincemore-sharara" target="_blank" rel="noopener noreferrer" className="p-2">
-          <Linkedin className="w-5 h-5" />
-        </a>
-      </header>
+      {/* Mobile Navigation */}
+      <MobileNav currentPath="/projects" variant="page" />
 
       {/* Hero Section */}
       <section className="px-6 py-16 bg-gradient-to-br from-orange-50 via-pink-50 to-purple-100">
@@ -86,7 +63,17 @@ export default function ProjectsPage() {
 
             {/* Project 2 - BCX OneCX Salesforce */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="md:order-2">
+              <div className="relative md:order-2">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/OneCX-GtfYp2YPqIHTDWjHi5Imi4GwAUBVPN.png"
+                  alt="BCX OneCX Platform Interface"
+                  width={800}
+                  height={600}
+                  quality={95}
+                  className="w-full rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
+                />
+              </div>
+              <div className="md:order-1">
                 <div className="inline-block bg-blue-100 text-blue-800 px-3 py-1 rounded-full text-sm mb-4">
                   SELF-SERVICE MOBILE APP
                 </div>
@@ -107,16 +94,6 @@ export default function ProjectsPage() {
                     View Case Study <ArrowRight className="w-4 h-4 ml-1" />
                   </Link>
                 </Button>
-              </div>
-              <div className="relative md:order-1">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/OneCX-GtfYp2YPqIHTDWjHi5Imi4GwAUBVPN.png"
-                  alt="BCX OneCX Platform Interface"
-                  width={800}
-                  height={600}
-                  quality={95}
-                  className="w-full rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
-                />
               </div>
             </div>
 
@@ -156,7 +133,17 @@ export default function ProjectsPage() {
 
             {/* Project 4 - Agritech Web Application */}
             <div className="grid md:grid-cols-2 gap-12 items-center">
-              <div className="md:order-2">
+              <div className="relative md:order-2">
+                <Image
+                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Cluck%20n%20Track-1ppc9TgG5CA4SMKz49OPHKB00FX2le.png"
+                  alt="Cluck & Track Agritech Platform"
+                  width={800}
+                  height={600}
+                  quality={95}
+                  className="w-full rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
+                />
+              </div>
+              <div className="md:order-1">
                 <div className="inline-block bg-green-100 text-green-800 px-3 py-1 rounded-full text-sm mb-4">
                   AGRITECH WEB APPLICATION
                 </div>
@@ -175,16 +162,6 @@ export default function ProjectsPage() {
                     View Case Study <ArrowRight className="w-4 h-4 ml-1" />
                   </Link>
                 </Button>
-              </div>
-              <div className="relative md:order-1">
-                <Image
-                  src="https://hebbkx1anhila5yf.public.blob.vercel-storage.com/Cluck%20n%20Track-1ppc9TgG5CA4SMKz49OPHKB00FX2le.png"
-                  alt="Cluck & Track Agritech Platform"
-                  width={800}
-                  height={600}
-                  quality={95}
-                  className="w-full rounded-lg shadow-lg hover:scale-105 transition-transform duration-300 cursor-pointer"
-                />
               </div>
             </div>
           </div>
@@ -213,11 +190,8 @@ export default function ProjectsPage() {
 
       {/* Footer */}
       <footer className="border-t border-gray-300 py-8 px-6">
-        <div className="max-w-6xl mx-auto flex items-center justify-between">
+        <div className="max-w-6xl mx-auto text-center">
           <p className="text-sm text-gray-600">© 2025 Lince Sharara | Get In Touch lincesharara@gmail.com</p>
-          <a href="https://www.linkedin.com/in/lincemore-sharara" target="_blank" rel="noopener noreferrer" className="p-2">
-            <Linkedin className="w-5 h-5" />
-          </a>
         </div>
       </footer>
     </div>
